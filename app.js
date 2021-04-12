@@ -31,6 +31,26 @@ app.use("/", index);
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
+const musicRoutes = require("./routes/music");
+app.use("/music", musicRoutes);
+
+const aboutRoutes = require("./routes/about");
+app.use("/about", aboutRoutes);
+
+const tourRoutes = require("./routes/tour");
+app.use("/tour", tourRoutes);
+
+const merchRoutes = require("./routes/merch");
+app.use("/merch", merchRoutes);
+
+const contactRoutes = require("./routes/contact");
+app.use("/contact", contactRoutes);
+
+const friendsRoutes = require("./routes/friends");
+app.use("/friends", friendsRoutes);
+
+
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
