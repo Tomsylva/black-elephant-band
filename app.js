@@ -49,6 +49,8 @@ app.use("/contact", contactRoutes);
 const friendsRoutes = require("./routes/friends");
 app.use("/friends", friendsRoutes);
 
+const videosRoutes = require("./routes/videos");
+app.use("/videos", videosRoutes);
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
