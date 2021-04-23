@@ -2,8 +2,21 @@
 
 {{!-- Check out the link at https://www.w3schools.com/html/html_youtube.asp - you can directly inject youtube link --}}
 
+{{#each videos}}
 <iframe width="420" height="315"
-src="https://www.youtube.com/embed/nHkYfXfMgEU">
+src="https://www.youtube.com/embed/{{this.url}}">
 </iframe>
+<br>
+{{#if ../user}}
+<a href="/videos/delete/{{this.url}}">Delete Video</a>
+{{/if}}
+{{/each}}
+
+{{#if user}}
+<form action="/videos" method="POST">
+    <input type="text" name="videoLink" id="videoLink" placeholder="video-link" required="true">
+    <button type="submit">Post video</button>
+</form>
+{{/if}}
 
 <a href="/">Back to home</a>
