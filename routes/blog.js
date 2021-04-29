@@ -4,8 +4,9 @@ const Posts = require("../models/Posts.model");
 
 router.get("/", (req, res) => {
     Posts.find().then((foundBlogs => {
-      res.render("blog", {user: req.session.user?._id, blogs: foundBlogs})
+      res.render("blog", {user: req.session.user?._id, blogs: foundBlogs,})
     })).catch((err) => {
+      res.render("blog");
       console.log(err)
     })
   });
@@ -17,10 +18,10 @@ router.get("/", (req, res) => {
       text,
     })
       .then((newBlog) => {
-      res.redirect("/blog")
+      res.redirect("/")
     }).catch((err) => {
       console.log(err);
-      res.redirect("/blog")
+      res.redirect("/")
     })
   })
 

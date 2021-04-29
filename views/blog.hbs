@@ -1,5 +1,6 @@
 <h2>This 'n That</h2>
 
+{{#if blogs}}
 {{#each blogs}}
 <div class="blog-posts">
     <h3>{{this.title}}</h3>
@@ -11,14 +12,15 @@
     {{/if}}
 </div>
 {{/each}}
+{{/if}}
 
 {{#if user}}
-    <h3>New Post</h3>
-    <form action="/blog" method="POST">
+<h3>New Post</h3>
+<form action="/blog" method="POST">
     <input type="text" name="title" placeholder="title">
     <input type="text" name="text" placeholder="text">
     <button type="submit">Post new Blog</button>
-    </form>
+</form>
 {{/user}}
 
 <a href="/">Back to home</a>
