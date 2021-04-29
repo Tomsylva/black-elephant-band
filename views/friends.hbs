@@ -1,6 +1,26 @@
 <h2>Other Projects</h2>
 <br>
-<br>
-<p>Here will be the links to other bands and projects</p>
+{{#each friend}}
+<div class="artist">
+    <h3><a href="{{this.link}}">{{this.name}}</a></h3>
+    <img src="{{this.image}}" alt="">
+    <p>{{this.description}}</p>
+    {{#if ../user}}
+    <a href="/friends/{{this.name}}/delete">Delete Project</a>
+    {{/if}}
+</div>
+{{/each}}
+
+{{#if user}}
+<h3>Add new project</h3>
+
+<form action="/friends" method="POST">
+    <input type="text" name="artistName" placeholder="Name" required="true">
+    <input type="text" name="artistDescription" placeholder="Description" required="true">
+    <input type="text" name="artistLink" placeholder="Link to website">
+    <button type="submit">Add</button>
+</form>
+
+{{/if}}
 
 <a href="/">Back to home</a>

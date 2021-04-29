@@ -13,9 +13,6 @@ const artistSchema = new Schema({
   image: {
       tspe: String,
   },
-  tracks: [{
-      type: Schema.Types.ObjectId, ref: "Track"
-  }]
 });
 
 const Artist = model("Artist", artistSchema);

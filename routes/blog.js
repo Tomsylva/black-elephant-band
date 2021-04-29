@@ -3,9 +3,9 @@ const isLoggedIn = require("../middlewares/isLoggedIn");
 const Posts = require("../models/Posts.model");
 
 router.get("/", (req, res) => {
-    Posts.find().then((foundBlogs => {
-      res.render("blog", {user: req.session.user?._id, blogs: foundBlogs,})
-    })).catch((err) => {
+    Posts.find().then((foundBlogs) => {
+      res.render("blog", {user: req.session.user?._id, blogs: foundBlogs})
+    }).catch((err) => {
       res.render("blog");
       console.log(err)
     })
