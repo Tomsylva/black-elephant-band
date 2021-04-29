@@ -14,6 +14,8 @@
 {{/each}}
 
 {{#if user}}
+<h3>Add a new Video</h3>
+<p>Paste the code aftrer the "=" sign of the youtube link</p>
 <form action="/videos" method="POST">
     <input type="text" name="videoLink" id="videoLink" placeholder="video-link" required="true">
     <button type="submit">Post video</button>
