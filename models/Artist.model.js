@@ -5,13 +5,13 @@ const artistSchema = new Schema({
     type: String,
   },
   description: {
-      type: String,
+    type: String,
   },
   link: {
     type: String,
   },
   image: {
-      tspe: String,
+    type: String,
   },
 });
 

@@ -5,11 +5,15 @@ const postsSchema = new Schema({
     type: String,
   },
   text: {
-      type: String,
+    type: String,
   },
   image: {
-      type: String,
-  }
+    type: String,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 const Posts = model("Posts", postsSchema);

@@ -5,6 +5,7 @@
     <h3><a href="{{this.link}}" target="_blank">{{this.name}}</a></h3>
     <img src="{{this.image}}" alt="">
     <p>{{this.description}}</p>
+
     {{#if ../user}}
     <a href="/friends/{{this.name}}/delete">Delete Project</a>
     {{/if}}
@@ -20,7 +21,6 @@
     <input type="text" name="artistLink" placeholder="Link to website">
     <button type="submit">Add</button>
 </form>
-
 {{/if}}
 
 <a href="/">Back to home</a>
