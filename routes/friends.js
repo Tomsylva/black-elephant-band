@@ -32,7 +32,38 @@ router.post("/", isLoggedIn, (req, res) => {
     });
 });
 
-router.get("/:artistName/delete", isLoggedIn, (req, res) => {
+router.get("/edit/:artistName", isLoggedIn, (req, res) => {
+  Artist.findOne({ name: req.params.artistName })
+    .then((foundArtist) => {
+      res.render("edit-friends", {
+        artist: foundArtist,
+        user: req.session.user?._id,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.redirect("/friends");
+    });
+});
+
+router.post("/edit/:artistName", isLoggedIn, (req, res) => {
+  const artistName = req.params.artistName;
+  const { name, description, link } = req.body;
+  Artist.findOneAndUpdate(
+    { name: artistName },
+    { $set: { name: name, description: description, link: link } },
+    { new: true }
+  )
+    .then((updatedArtist) => {
+      return res.redirect("/friends");
+    })
+    .catch((err) => {
+      console.log(err);
+      return res.redirect("/friends");
+    });
+});
+
+router.get("/delete/:artistName", isLoggedIn, (req, res) => {
   Artist.findOneAndDelete({ name: req.params.artistName })
     .then(() => {
       res.redirect("/friends");

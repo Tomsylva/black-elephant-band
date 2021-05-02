@@ -34,7 +34,10 @@ router.post("/", isLoggedIn, (req, res) => {
 router.get("/edit/:postId", isLoggedIn, (req, res) => {
   Posts.findOne({ _id: req.params.postId })
     .then((foundPost) => {
-      res.render("edit-blog", { blog: foundPost, user: req.session.user?._id });
+      res.render("edit-blog", {
+        blog: foundPost,
+        user: req.session.user?._id,
+      });
     })
     .catch((err) => {
       console.log(err);

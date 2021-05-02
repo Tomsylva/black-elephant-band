@@ -1,0 +1,22 @@
+<h2>Edit Project</h2>
+
+{{#with artist}}
+
+<div class="edit-form">
+    <form action="/friends/edit/{{this.name}}" method="POST">
+
+        <label for="name">Name</label>
+        <input name="name" value="{{this.name}}" type="text">
+        <br>
+        <label for="description">Description</label>
+        <input name="description" value="{{this.description}}" type="text">
+        <br>
+        <label for="link">Link</label>
+        <input name="link" value="{{this.link}}" type="text">
+        <br>
+        <button type="submit">Submit Changes</button>
+
+    </form>
+</div>
+
+{{/with}}
