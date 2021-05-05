@@ -22,6 +22,9 @@
          <a href="/merch">Merch</a>
          <a href="/contact">Contact</a>
          <a href="/friends">Other Projects</a>
+         {{#if ./user}}
+         <a href="/auth/logout">LOGOUT</a>
+         {{/if}}
       </ul>
    </nav>
    <h1>The Black Elephant Band</h1>
