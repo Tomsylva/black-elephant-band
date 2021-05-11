@@ -3,7 +3,7 @@
 {{#each blogs}}
 <div class="blog-posts">
     <h3>{{this.title}}</h3>
-    <p>{{this.text}}</p>
+    <p>{{{this.sanitizedHtml}}}</p>
 
     {{#if ../user}}
     <a href="/blog/delete/{{this._id}}">Delete</a>
