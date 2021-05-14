@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const isLoggedIn = require("../middlewares/isLoggedIn");
 const Posts = require("../models/Posts.model");
-const tinyApi = TINY_API;
+// const tinyApi = TINY_API;
 
 router.get("/", (req, res) => {
   Posts.find()
@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
       res.render("blog", {
         user: req.session.user?._id,
         blogs: foundBlogs,
-        tinyApi: tinyApi,
+        // tinyApi: tinyApi,
       });
     })
     .catch((err) => {
@@ -39,7 +39,7 @@ router.get("/edit/:postId", isLoggedIn, (req, res) => {
       res.render("edit-blog", {
         blog: foundPost,
         user: req.session.user?._id,
-        tinyApi: tinyApi,
+        // tinyApi: tinyApi,
       });
     })
     .catch((err) => {
