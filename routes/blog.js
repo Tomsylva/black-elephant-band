@@ -5,6 +5,7 @@ const Posts = require("../models/Posts.model");
 
 router.get("/", (req, res) => {
   Posts.find()
+    .sort({ date: "desc" })
     .then((foundBlogs) => {
       res.render("blog", {
         user: req.session.user?._id,
@@ -25,6 +26,7 @@ router.post("/", isLoggedIn, (req, res) => {
     text,
   })
     .then((newBlog) => {
+      console.log(newBlog);
       res.redirect("/blog");
     })
     .catch((err) => {

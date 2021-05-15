@@ -16,7 +16,7 @@ const postsSchema = new Schema({
   },
   date: {
     type: Date,
-    default: Date.now,
+    default: Date.now(),
   },
   // sanitizedHtml: {
   //   type: String,
