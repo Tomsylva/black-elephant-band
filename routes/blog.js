@@ -40,7 +40,7 @@ router.get("/edit/:postId", isLoggedIn, (req, res) => {
       res.render("edit-blog", {
         blog: foundPost,
         user: req.session.user?._id,
-        // tinyApi: tinyApi,
+        tinyApi: tinyApi,
       });
     })
     .catch((err) => {
