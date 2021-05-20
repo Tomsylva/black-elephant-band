@@ -27,7 +27,6 @@ router.post("/", isLoggedIn, parser.single("image"), (req, res) => {
     image: picture,
   })
     .then((newArtist) => {
-      console.log(req.file);
       res.redirect("/friends");
     })
     .catch((err) => {
