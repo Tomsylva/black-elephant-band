@@ -1,8 +1,4 @@
 const { Schema, model } = require("mongoose");
-// const marked = require("marked");
-// const createDomPurify = require("dompurify");
-// const { JSDOM } = require("jsdom");
-// const dompurify = createDomPurify(new JSDOM().window);
 
 const postsSchema = new Schema({
   title: {
@@ -18,18 +14,7 @@ const postsSchema = new Schema({
     type: Date,
     default: Date.now(),
   },
-  // sanitizedHtml: {
-  //   type: String,
-  //   required: true,
-  // },
 });
-
-// postsSchema.pre("validate", function (next) {
-//   if (this.text) {
-//     this.sanitizedHtml = dompurify.sanitize(marked(this.text));
-//   }
-//   next();
-// });
 
 const Posts = model("Posts", postsSchema);
 
