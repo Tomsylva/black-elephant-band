@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const isLoggedIn = require("../middlewares/isLoggedIn");
 const Posts = require("../models/Posts.model");
-const parser = require("../config/cloudinary");
 const tinyApi = process.env.TINY_API;
 
 router.get("/", (req, res) => {
