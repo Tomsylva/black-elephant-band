@@ -20,9 +20,8 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", isLoggedIn, parser.single("image"), (req, res) => {
+router.post("/", isLoggedIn, (req, res) => {
   const { title, text } = req.body;
-  console.log(req.file);
   Posts.create({
     title,
     text,
@@ -51,28 +50,22 @@ router.get("/edit/:postId", isLoggedIn, (req, res) => {
     });
 });
 
-router.post(
-  "/edit/:postId/edit",
-  isLoggedIn,
-  parser.single("image"),
-  (req, res) => {
-    console.log(req.file);
-    const postId = req.params.postId;
-    const { title, text } = req.body;
-    Posts.findByIdAndUpdate(
-      postId,
-      { $set: { title: title, text: text } },
-      { new: true }
-    )
-      .then((updatedBlog) => {
-        return res.redirect("/blog");
-      })
-      .catch((err) => {
-        console.log(err);
-        return res.redirect("/blog");
-      });
-  }
-);
+router.post("/edit/:postId/edit", isLoggedIn, (req, res) => {
+  const postId = req.params.postId;
+  const { title, text } = req.body;
+  Posts.findByIdAndUpdate(
+    postId,
+    { $set: { title: title, text: text } },
+    { new: true }
+  )
+    .then((updatedBlog) => {
+      return res.redirect("/blog");
+    })
+    .catch((err) => {
+      console.log(err);
+      return res.redirect("/blog");
+    });
+});
 
 router.get("/delete/:postId", isLoggedIn, (req, res) => {
   Posts.findOneAndDelete({ _id: req.params.postId })

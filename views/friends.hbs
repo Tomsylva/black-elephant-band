@@ -16,11 +16,14 @@
 {{#if user}}
 <h3>Add new project</h3>
 
-<form action="/friends" method="POST">
+<form action="/friends" method="POST" enctype="multipart/form-data">
     <input type="text" name="artistName" placeholder="Name" required="true">
     <input type="text" name="artistDescription" placeholder="Description" required="true">
     <input type="text" name="artistLink" placeholder="Link to website">
-    <button type="submit">Add</button>
+    <p>Image:</p>
+    <input type="file" name="image">
+    <br><br>
+    <button type="submit">Add Project</button>
 </form>
 {{/if}}
 

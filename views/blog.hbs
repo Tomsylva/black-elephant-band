@@ -14,12 +14,9 @@
 
 {{#if user}}
 <h3>New Post</h3>
-<form action="/blog" method="POST" enctype="multipart/form-data">
+<form action="/blog" method="POST">
     <input type="text" name="title" placeholder="title">
     <input type="textarea" id="new-blog" name="text" placeholder="text">
-    <br>
-    <p>Image:</p>
-    <input type="file" name="image">
     <br>
     <br>
     <button type="submit">Post new Blog</button>

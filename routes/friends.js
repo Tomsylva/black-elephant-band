@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const isLoggedIn = require("../middlewares/isLoggedIn");
 const Artist = require("../models/Artist.model");
+const parser = require("../config/cloudinary");
 
 router.get("/", (req, res) => {
   Artist.find()
@@ -16,14 +17,17 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", isLoggedIn, (req, res) => {
+router.post("/", isLoggedIn, parser.single("image"), (req, res) => {
   const { artistName, artistDescription, artistLink } = req.body;
+  const picture = req.file.path;
   Artist.create({
     name: artistName,
     description: artistDescription,
     link: artistLink,
+    image: picture,
   })
     .then((newArtist) => {
+      console.log(req.file);
       res.redirect("/friends");
     })
     .catch((err) => {
