@@ -2,6 +2,7 @@ const router = require("express").Router();
 const isLoggedIn = require("../middlewares/isLoggedIn");
 const Posts = require("../models/Posts.model");
 const tinyApi = process.env.TINY_API;
+const cloudinary = require("cloudinary");
 
 router.get("/", (req, res) => {
   Posts.find()
