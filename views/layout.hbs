@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="/stylesheets/style.css" />
 
    <script src={{tinyApi}} referrerpolicy="origin"></script>
+   {{#if tinyApi}}
    <script>
       tinymce.init({
         selector: '#new-blog'
@@ -19,6 +20,7 @@
           selector: "#edit-blog"
        });
     </script>
+    {{/if}}
 
 </head>
 
