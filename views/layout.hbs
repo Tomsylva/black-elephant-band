@@ -37,30 +37,35 @@
        });
     </script>
     
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
    <nav>
+      <a href="/"><img src="/images/blackelephant_Typo.png" class="homelink"></a>
       <ul id="nav-links">
-         <a href="/">Home</a>
-         <a href="/blog">This 'n That</a>
-         <a href="/about">About</a>
-         <a href="/music">Music</a>
-         <a href="/videos">Videos</a>
-         <a href="/tour">On Tour</a>
-         <a href="/merch">Merch</a>
-         <a href="/contact">Contact</a>
-         <a href="/friends">Other Projects</a>
+         <li><a href="/blog">THIS N THAT</a> / </li>
+         <li><a href="/about">ABOUT</a> / </li>
+         <li><a href="/music">MUSIC</a> / </li>
+         <li><a href="/videos">VIDEOS</a> / </li>
+         <li><a href="/tour">ON TOUR</a> / </li>
+         <li><a href="/merch">MERCH</a> / </li>
+         <li><a href="/contact">CONTACT</a> / </li>
+         <li><a href="/friends">OTHER PROJECTS</a></li>
          {{#if ./user}}
          <a href="/auth/logout">LOGOUT</a>
          {{/if}}
       </ul>
    </nav>
-   <h1>The Black Elephant Band</h1>
+<div class="transparent">
 
-   {{{body}}}
+{{{body}}}
+
+</div>
+   
 
    <footer>
       <div id="website-links">

@@ -1,10 +1,17 @@
 body {
-  padding: 50px;
+  height: 100vh;
+  width: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/Jan_complete_yellow.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 
 a {
-  color: #00b7ff;
+  color: black;
+  text-decoration: none;
 }
 
 h1 {
@@ -17,4 +24,30 @@ h1 {
   padding: 5px;
 }
 
-/*# sourceMappingURL=style.css.map */
+.homelink {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 20px;
+}
+
+#nav-links {
+  background: white;
+  padding: 10px 0;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#nav-links li {
+  list-style: none;
+  padding: 0 5px;
+  font-family: "Caveat Brush", cursive;
+  font-size: 20px;
+}
+
+.transparent {
+  background: rgba(255, 255, 255, 0.877);
+  margin: 30px;
+}
