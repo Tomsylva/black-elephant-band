@@ -1,8 +1,10 @@
+<div class="transparent">
+
 <h2>Edit Post</h2>
 
 {{#with blog}}
 
-<div class="edit-form transparent">
+<div class="edit-form">
     <form action="/blog/edit/{{_id}}/edit" method="POST">
 
         <label for="title">Blog Title</label>
@@ -18,3 +20,5 @@
 </div>
 
 {{/with}}
+
+</div>
