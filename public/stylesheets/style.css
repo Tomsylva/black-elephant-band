@@ -43,7 +43,7 @@ h1 {
 }
 
 #nav-links {
-  background: white;
+  background: rgba(255, 250, 210, 0.945);
   padding: 10px 0;
   display: inline-flex;
   justify-content: center;
@@ -59,7 +59,7 @@ h1 {
 }
 
 .transparent {
-  background: rgba(255, 255, 255, 0.897);
+  background: rgba(255, 250, 210, 0.945);
   margin: 30px;
 }
 
