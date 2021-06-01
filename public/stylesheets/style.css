@@ -99,12 +99,14 @@ h2 {
   transition: all 0.3s;
 }
 
-.artist h3 {
+.artist h3,
+.blog-posts h3 {
   padding: 0.5rem;
   font-family: propaganda;
 }
 
-.artist p {
+.artist p,
+.blog-posts p {
   padding: 0.5rem;
 }
 
@@ -118,6 +120,12 @@ h2 {
 .edit-links {
   color: rgb(161, 2, 2);
   text-decoration: underline;
+}
+
+.blog-posts {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(248, 205, 215, 0.753);
 }
 
 @media screen and (max-width: 1190px) {

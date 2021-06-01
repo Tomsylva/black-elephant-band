@@ -8,8 +8,8 @@
     <p>{{{this.text}}}</p>
 
     {{#if ../user}}
-    <a href="/blog/delete/{{this._id}}">Delete</a>
-    <a href="/blog/edit/{{this._id}}">Edit</a>
+    <a href="/blog/delete/{{this._id}}" class="edit-links">Delete</a>
+    <a href="/blog/edit/{{this._id}}" class="edit-links">Edit</a>
     {{/if}}
 </div>
 {{/each}}
