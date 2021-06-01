@@ -88,6 +88,15 @@ h2 {
   margin: auto;
   margin-top: 1.5rem;
   border: 2px solid black;
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+  transition: all 0.3s;
+}
+
+.artist:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transition: all 0.3s;
 }
 
 .artist h3 {
