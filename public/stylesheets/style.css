@@ -67,6 +67,10 @@ h2 {
   font-size: 20px;
 }
 
+.redlink {
+  color: rgb(161, 2, 2);
+}
+
 .transparent {
   background: rgba(255, 250, 210, 0.945);
   margin: 30px;
@@ -74,4 +78,16 @@ h2 {
 
 .embedded {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1190px) {
+  #nav-links li {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #nav-links li {
+    font-size: 10px;
+  }
 }
