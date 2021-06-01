@@ -6,7 +6,7 @@ const cloudinary = require("cloudinary");
 
 router.get("/", (req, res) => {
   Posts.find()
-    .sort({ date: "desc" })
+    .sort({ date: -1 })
     .then((foundBlogs) => {
       res.render("blog", {
         user: req.session.user?._id,
