@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "propaganda";
+  src: url("../fonts/PROPAGAN.ttf") format("truetype");
+}
+
 * {
   margin: 0;
 }
@@ -21,6 +26,10 @@ a {
 
 h1 {
   color: 15px;
+}
+
+h2 {
+  font-family: propaganda;
 }
 
 .homepage {
@@ -54,7 +63,7 @@ h1 {
 #nav-links li {
   list-style: none;
   padding: 0 5px;
-  font-family: "Caveat Brush", cursive;
+  font-family: propaganda;
   font-size: 20px;
 }
 
