@@ -126,6 +126,9 @@ h2 {
   padding: 1rem;
   margin: 1rem;
   background-color: rgba(248, 205, 215, 0.753);
+}
+
+.blog-posts p {
   text-align: justify;
 }
 
