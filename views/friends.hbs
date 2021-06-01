@@ -1,16 +1,21 @@
 <div class="transparent">
+    <br>
     <h2>Other Projects</h2>
 <br>
 {{#each friend}}
-<div class="artist">
-    <h3><a href="{{this.link}}" target="_blank">{{this.name}}</a></h3>
-    <img src="{{this.image}}" alt="">
+<div class="artist" style="background: url({{this.image}});">
+    <div class="overlay">
+    <h3><a href="{{this.link}}" target="_blank" class="embedded">{{this.name}}</a></h3>
+    {{!-- <img src="{{this.image}}" alt=""> --}}
     <p>{{this.description}}</p>
 
     {{#if ../user}}
-    <a href="/friends/edit/{{this.name}}">Edit Project</a>
-    <a href="/friends/delete/{{this.name}}">Delete Project</a>
+    <div>
+    <a href="/friends/edit/{{this.name}}" class="edit-links">Edit Project</a>
+    <a href="/friends/delete/{{this.name}}" class="edit-links">Delete Project</a>
+    </div>
     {{/if}}
+    </div>
 </div>
 {{/each}}
 
@@ -27,4 +32,6 @@
     <button type="submit">Add Project</button>
 </form>
 {{/if}}
+<br>
+<br>
 </div>
