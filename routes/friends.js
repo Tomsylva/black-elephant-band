@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     })
     .catch((err) => {
       res.render("friends");
-      console.log(err);
+      console.error(err);
     });
 });
 
@@ -31,7 +31,7 @@ router.post("/", isLoggedIn, parser.single("image"), (req, res) => {
       res.redirect("/friends");
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
       res.redirect("/");
     });
 });
