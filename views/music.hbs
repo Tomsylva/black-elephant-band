@@ -17,6 +17,10 @@ make a delete function? --}}
 {{#each track}}
 <div>
     {{{this.track}}}
+    {{#if ../user}}
+    <br />
+    <a href="/music/delete/{{this._id}}">Delete</a>
+    {{/if}}
 </div>
 {{/each}}
 <br>

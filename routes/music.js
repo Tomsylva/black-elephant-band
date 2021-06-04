@@ -18,7 +18,16 @@ router.post("/", isLoggedIn, (req, res) => {
     track: track,
   })
     .then((newTrack) => {
-      console.log(newTrack);
+      res.redirect("/music");
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+router.get("/delete/:trackId", isLoggedIn, (req, res) => {
+  Track.findByIdAndDelete(req.params.trackId)
+    .then(() => {
       res.redirect("/music");
     })
     .catch((err) => {

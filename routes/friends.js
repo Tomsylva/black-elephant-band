@@ -62,7 +62,7 @@ router.post("/edit/:artistName", isLoggedIn, (req, res) => {
       return res.redirect("/friends");
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
       return res.redirect("/friends");
     });
 });
@@ -73,7 +73,7 @@ router.get("/delete/:artistName", isLoggedIn, (req, res) => {
       res.redirect("/friends");
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
       res.redirect("/friends");
     });
 });
