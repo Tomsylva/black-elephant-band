@@ -35,11 +35,6 @@ h2 {
 
 footer {
   background: rgba(255, 250, 210, 0.945);
-  /* background: linear-gradient(
-    0deg,
-    rgba(255, 250, 210, 0.95) 75%,
-    rgba(255, 250, 210, 0) 100%
-  ); */
   padding: 20px 0;
   margin: 30px;
 }
@@ -273,7 +268,7 @@ hr {
     width: 80%;
   }
   .homelink {
-    width: 80%;
+    width: 90%;
   }
   .nav-links-footer li {
     width: 40%;
