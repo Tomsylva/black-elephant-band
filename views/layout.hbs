@@ -67,9 +67,28 @@
 
 {{{body}}}
 
-
    <footer>
-      <div id="website-links" class="transparent">
+      <div class="mobile-nav-links">
+      <ul class="nav-links-footer">
+         <li><a href="/blog">THIS N THAT</a></li>
+         <li><a href="/about">ABOUT</a></li>
+         <li><a href="/tour">ON TOUR</a></li>
+         <li><a href="https://theblackelephantband.bandcamp.com/merch" target="_blank">MERCH</a></li>
+      </ul>
+      <ul class="nav-links-footer">
+         <li><a href="/music">MUSIC</a></li>
+         <li><a href="/videos">VIDEOS</a></li>
+         <li><a href="/contact">CONTACT</a></li>
+         <li><a href="/friends">OTHER PROJECTS</a></li>
+         {{#if ./user}}
+         <li>/ <a href="/auth/logout" class="redlink">LOGOUT</a></li>
+         {{/if}}
+      </ul>
+      <br>
+       <hr>
+      </div>
+      <br>
+      <div id="website-links">
          <ul>
             <a href="https://www.facebook.com/theblackelephantband/" target="_blank"><img
                   src="/images/f_logo_RGB-Black_250.png" class="website-logo" alt="Facebook"></a>
@@ -81,10 +100,9 @@
                target="_blank"><img src="/images/Spotify_Icon_RGB_Black.png" class="website-logo" alt="Spotify"></a>
             <a href="https://theblackelephantband.bandcamp.com/" target="_blank"><img
                   src="/images/bandcamp-button-circle-black-256.png" class="website-logo" alt="Bandcamp"></a>
-
          </ul>
-         <a href="/impressum">Impressum</a>
       </div>
+      <a href="/impressum">Impressum</a>
       <br>
    </footer>
 

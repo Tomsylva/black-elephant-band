@@ -7,8 +7,9 @@
 <br>
 <br>
 
+<div class="music-page">
 {{#each track}}
-<div>
+<div class="music-album">
     {{{this.track}}}
     {{#if ../user}}
     <br />
@@ -16,8 +17,7 @@
     {{/if}}
 </div>
 {{/each}}
-<br>
-<br>
+</div>
 
 {{#if user}}
 <h3>Add a new album</h3>

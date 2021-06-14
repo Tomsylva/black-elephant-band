@@ -5,6 +5,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -32,9 +33,31 @@ h2 {
   font-family: propaganda;
 }
 
+footer {
+  background: rgba(255, 250, 210, 0.945);
+  /* background: linear-gradient(
+    0deg,
+    rgba(255, 250, 210, 0.95) 75%,
+    rgba(255, 250, 210, 0) 100%
+  ); */
+  padding: 20px 0;
+  margin: 30px;
+}
+
+nav {
+  margin: 30px;
+}
+
 .homepage {
-  height: 60vh;
+  height: 65vh;
   width: 100vw;
+}
+
+.website-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .website-logo {
@@ -160,6 +183,38 @@ h2 {
   padding: 1rem 0 0 0;
 }
 
+.music-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.music-album {
+  border: none;
+  margin: 1rem;
+}
+
+.nav-links-footer {
+  display: none;
+}
+
+hr {
+  display: none;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.mobile-nav-links {
+  display: none;
+}
+
 @media screen and (max-width: 1190px) {
   #nav-links li {
     font-size: 15px;
@@ -169,6 +224,59 @@ h2 {
 @media screen and (max-width: 920px) {
   #nav-links li {
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .single-video {
+    height: 200px;
+  }
+  .video-div {
+    width: 80%;
+  }
+  .homepage {
+    height: 50%;
+  }
+  .homelink {
+    width: 70%;
+  }
+  footer {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  hr {
+    display: block;
+  }
+  .mobile-nav-links {
+    display: block;
+  }
+  #nav-links {
+    display: none;
+  }
+  .nav-links-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .nav-links-footer li {
+    list-style: none;
+    font-family: propaganda;
+    font-size: 16px;
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .video-div {
+    width: 80%;
+  }
+  .homelink {
+    width: 80%;
+  }
+  .nav-links-footer li {
+    width: 40%;
+    padding: 0.5rem 0;
   }
 }
 
