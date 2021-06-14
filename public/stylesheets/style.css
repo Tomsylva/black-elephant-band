@@ -143,3 +143,27 @@ h2 {
     font-size: 10px;
   }
 }
+
+.video-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.video-div {
+  width: 45%;
+}
+
+.single-video {
+  border: none;
+  padding: 1rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.edit-stuff {
+  padding: 2rem;
+}
