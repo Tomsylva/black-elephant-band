@@ -132,18 +132,6 @@ h2 {
   text-align: justify;
 }
 
-@media screen and (max-width: 1190px) {
-  #nav-links li {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 920px) {
-  #nav-links li {
-    font-size: 10px;
-  }
-}
-
 .video-page {
   display: flex;
   flex-direction: row;
@@ -170,4 +158,34 @@ h2 {
 
 .add-padding {
   padding: 1rem 0 0 0;
+}
+
+@media screen and (max-width: 1190px) {
+  #nav-links li {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #nav-links li {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .single-video {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .single-video {
+    height: 315px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .single-video {
+    height: 400px;
+  }
 }

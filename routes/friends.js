@@ -2,7 +2,7 @@ const router = require("express").Router();
 const isLoggedIn = require("../middlewares/isLoggedIn");
 const Artist = require("../models/Artist.model");
 const parser = require("../config/cloudinary");
-const cloudinary = require("cloudinary");
+// const cloudinary = require("cloudinary");
 
 router.get("/", (req, res) => {
   Artist.find()
@@ -27,7 +27,7 @@ router.post("/", isLoggedIn, parser.single("image"), (req, res) => {
     link: artistLink,
     image: picture,
   })
-    .then((newArtist) => {
+    .then((/*newArtist*/) => {
       res.redirect("/friends");
     })
     .catch((err) => {
@@ -58,7 +58,7 @@ router.post("/edit/:artistName", isLoggedIn, (req, res) => {
     { $set: { name: name, description: description, link: link } },
     { new: true }
   )
-    .then((updatedArtist) => {
+    .then((/*updatedArtist*/) => {
       return res.redirect("/friends");
     })
     .catch((err) => {
