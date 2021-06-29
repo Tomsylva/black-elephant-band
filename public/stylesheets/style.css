@@ -15,7 +15,7 @@ body {
   background-image: url("../images/Jan_complete_yellow.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 150vh;
+  background-size: cover;
   background-attachment: fixed;
   text-align: center;
 }
@@ -318,11 +318,11 @@ hr {
   }
 }
 
-@media screen and (min-width: 1010px) {
+/* @media screen and (min-width: 1010px) {
   body {
     background-size: 150vw;
   }
-}
+} */
 
 @media screen and (max-width: 300px) {
   #main-email {
