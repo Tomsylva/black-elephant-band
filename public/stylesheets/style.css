@@ -324,8 +324,29 @@ hr {
   }
 } */
 
+@media screen and (max-width: 375px) {
+  .band-title {
+    font-size: 0.75rem;
+  }
+}
+
 @media screen and (max-width: 300px) {
   #main-email {
     font-size: 0.75rem;
+  }
+  .band-title {
+    font-size: 0.75rem;
+  }
+  .overlay {
+    width: 80%;
+    margin: 0.2rem auto;
+  }
+  .artist {
+    width: 80vw;
+    margin: 0.2rem auto;
+    padding: 0.4rem;
+  }
+  .artist p {
+    display: none;
   }
 }
