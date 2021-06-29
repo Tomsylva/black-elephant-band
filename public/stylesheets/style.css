@@ -34,7 +34,7 @@ h2 {
 }
 
 footer {
-  background: rgba(255, 250, 210, 0.945);
+  background: rgba(255, 255, 255, 0.945);
   padding: 20px 0;
   margin: 30px;
 }
@@ -70,7 +70,7 @@ nav {
 }
 
 #nav-links {
-  background: rgba(255, 250, 210, 0.945);
+  background: rgba(255, 255, 255, 0.945);
   padding: 10px 0;
   display: inline-flex;
   justify-content: center;
@@ -90,7 +90,7 @@ nav {
 }
 
 .transparent {
-  background: rgba(255, 250, 210, 0.945);
+  background: rgba(255, 255, 255, 0.945);
   margin: 30px;
 }
 
@@ -144,11 +144,20 @@ nav {
 .blog-posts {
   padding: 1rem;
   margin: 1rem;
-  background-color: rgba(248, 205, 215, 0.753);
+  background-color: rgba(255, 249, 167, 0.582);
 }
 
 .blog-posts p {
   text-align: justify;
+}
+
+.about-text p {
+  text-align: justify;
+  padding: 1rem;
+}
+
+.show-me {
+  display: block;
 }
 
 .video-page {
