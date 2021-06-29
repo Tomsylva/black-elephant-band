@@ -220,6 +220,15 @@ hr {
   display: none;
 }
 
+.impressum {
+  padding: 2rem;
+  text-align: justify;
+}
+
+.impressum-link {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1190px) {
   #nav-links li {
     font-size: 15px;
