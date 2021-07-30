@@ -2,7 +2,6 @@ const router = require("express").Router();
 const isLoggedIn = require("../middlewares/isLoggedIn");
 const Artist = require("../models/Artist.model");
 const parser = require("../config/cloudinary");
-// const cloudinary = require("cloudinary");
 
 router.get("/", (req, res) => {
   Artist.find()
