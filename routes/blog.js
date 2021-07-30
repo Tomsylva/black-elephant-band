@@ -2,7 +2,6 @@ const router = require("express").Router();
 const isLoggedIn = require("../middlewares/isLoggedIn");
 const Posts = require("../models/Posts.model");
 const tinyApi = process.env.TINY_API;
-const cloudinary = require("cloudinary");
 
 router.get("/", (req, res) => {
   Posts.find()
@@ -26,7 +25,7 @@ router.post("/", isLoggedIn, (req, res) => {
     title,
     text,
   })
-    .then((newBlog) => {
+    .then((/*newBlog*/) => {
       res.redirect("/blog");
     })
     .catch((err) => {
@@ -58,7 +57,7 @@ router.post("/edit/:postId/edit", isLoggedIn, (req, res) => {
     { $set: { title: title, text: text } },
     { new: true }
   )
-    .then((updatedBlog) => {
+    .then((/*updatedBlog*/) => {
       return res.redirect("/blog");
     })
     .catch((err) => {
