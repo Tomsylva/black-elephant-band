@@ -20,7 +20,7 @@ router.post("/", isLoggedIn, (req, res) => {
   Videos.create({
     url: videoLink,
   })
-    .then((/*newVideo*/) => {
+    .then(() => {
       res.redirect("/videos");
     })
     .catch((err) => {

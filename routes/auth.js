@@ -115,7 +115,7 @@ router.post("/login", shouldNotBeLoggedIn, (req, res, next) => {
             .render("auth/login", { errorMessage: "Wrong credentials." });
         }
         req.session.user = user;
-        // req.session.user = user._id; // ! better and safer but in this case we saving the entire user object
+        // req.session.user = user._id;
         return res.redirect("/");
       });
     })

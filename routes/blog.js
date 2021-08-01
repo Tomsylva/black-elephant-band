@@ -25,7 +25,7 @@ router.post("/", isLoggedIn, (req, res) => {
     title,
     text,
   })
-    .then((/*newBlog*/) => {
+    .then(() => {
       res.redirect("/blog");
     })
     .catch((err) => {
@@ -57,7 +57,7 @@ router.post("/edit/:postId/edit", isLoggedIn, (req, res) => {
     { $set: { title: title, text: text } },
     { new: true }
   )
-    .then((/*updatedBlog*/) => {
+    .then(() => {
       return res.redirect("/blog");
     })
     .catch((err) => {

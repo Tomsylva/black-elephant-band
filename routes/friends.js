@@ -26,7 +26,7 @@ router.post("/", isLoggedIn, parser.single("image"), (req, res) => {
     link: artistLink,
     image: picture,
   })
-    .then((/*newArtist*/) => {
+    .then(() => {
       res.redirect("/friends");
     })
     .catch((err) => {
@@ -57,7 +57,7 @@ router.post("/edit/:artistName", isLoggedIn, (req, res) => {
     { $set: { name: name, description: description, link: link } },
     { new: true }
   )
-    .then((/*updatedArtist*/) => {
+    .then(() => {
       return res.redirect("/friends");
     })
     .catch((err) => {
