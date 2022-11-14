@@ -6,6 +6,8 @@ const User = require("../models/User.model");
 const shouldNotBeLoggedIn = require("../middlewares/shouldNotBeLoggedIn");
 const isLoggedIn = require("../middlewares/isLoggedIn");
 
+// I am a note and I live in goat
+
 // router.get("/signup", shouldNotBeLoggedIn, (req, res) => {
 //   res.render("auth/signup");
 // });
