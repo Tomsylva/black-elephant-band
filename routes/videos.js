@@ -4,10 +4,11 @@ const Videos = require("../models/Video.model");
 
 router.get("/", (req, res) => {
   Videos.find()
-    .then((foundVideos) => {
+    .then((videos) => {
+      const result = videos.sort(() => (a, b) => a.order - b.order);
       res.render("videos", {
         user: req.session.user?._id,
-        videos: foundVideos,
+        videos: result,
       });
     })
     .catch((err) => {
@@ -30,6 +31,7 @@ router.post("/", isLoggedIn, (req, res) => {
 });
 
 router.get("/delete/:videoUrl", isLoggedIn, (req, res) => {
+  console.log("REQ PARAMS", req.params);
   Videos.findOneAndDelete({ url: req.params.videoUrl })
     .then(() => {
       res.redirect("/videos");
