@@ -4,11 +4,11 @@ const Videos = require("../models/Video.model");
 
 router.get("/", (req, res) => {
   Videos.find()
+    .sort({ order: 1 })
     .then((videos) => {
-      const result = videos.sort(() => (a, b) => a.order - b.order);
       res.render("videos", {
         user: req.session.user?._id,
-        videos: result,
+        videos: videos,
       });
     })
     .catch((err) => {
